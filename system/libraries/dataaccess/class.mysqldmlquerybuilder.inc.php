@@ -218,6 +218,43 @@ class MySQLDMLQueryBuilder extends DatabaseDMLQueryBuilder
     }
 
     /**
+     * Define the mode of the DELETE clause.
+     *
+     * @param String $mode The delete mode you want to use
+     *
+     * @return MySQLDMLQueryBuilder $self Self reference
+     */
+    public function delete_mode($mode)
+    {
+        $mode = strtoupper($mode);
+
+        switch ($mode)
+        {
+            case 'LOW_PRIORITY':
+            case 'QUICK':
+            case 'IGNORE':
+                $this->delete_mode[] = $mode;
+            default:
+                break;
+        }
+
+        return $this;
+    }
+
+    /**
+     * Define a DELETE clause.
+     *
+     * @param String $delete The tables to delete from
+     *
+     * @return MySQLDMLQueryBuilder $self Self reference
+     */
+    public function delete($delete = '')
+    {
+        $this->sql_delete($delete);
+        return $this;
+    }
+
+    /**
      * Define FROM clause of the SQL statement.
      *
      * @param String $table       Table reference

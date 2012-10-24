@@ -120,6 +120,36 @@ abstract class MySQLDMLQueryBuilderTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * Unit Test Data Provider for Delete modes
+     *
+     * @return array $modes Array of select modes
+     */
+    public function deleteModesStandardProvider()
+    {
+        $modes   = array();
+        $modes[] = array('LOW_PRIORITY');
+        $modes[] = array('QUICK');
+        $modes[] = array('IGNORE');
+
+        return $modes;
+    }
+
+    /**
+     * Unit Test Data Provider for Delete modes uppercasing
+     *
+     * @return array $expectedmodes Array of delete modes and their expected result
+     */
+    public function expectedDeleteModesProvider()
+    {
+        $expectedmodes   = array();
+        $expectedmodes[] = array('low_priority','LOW_PRIORITY');
+        $expectedmodes[] = array('QuIcK','QUICK');
+        $expectedmodes[] = array('IGNORE','IGNORE');
+
+        return $expectedmodes;
+    }
+
+    /**
      * Unit Test Data Provider for legal input values to be escaped as integer.
      *
      *  @return array $expecteds array of value to be escaped and their result
