@@ -1,22 +1,23 @@
 <?php
 
 /**
- * This file contains the MySQLDMLQueryBuilderSelectTest class.
+ * This file contains the MySQLDMLQueryBuilderDeleteTest class.
  *
  * PHP Version 5.3
  *
  * @category   Libraries
  * @package    DataAccess
  * @subpackage Tests
- * @author     M2Mobi <info@m2mobi.com>
  * @author     Felipe Martinez <felipe@m2mobi.com>
+ * @copyright  2012, M2Mobi BV, Amsterdam, The Netherlands
+ * @license    http://lunr.nl/LICENSE MIT License
  */
 
 namespace Lunr\Libraries\DataAccess;
 
 /**
  * This class contains the tests for the query parts necessary to build
- * select queries.
+ * delete queries.
  *
  * @category   Libraries
  * @package    DataAccess

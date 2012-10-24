@@ -10,6 +10,7 @@
  * @subpackage Libraries
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
  * @author     Olivier Wizen <olivier@m2mobi.com>
+ * @author     Felipe Martinez <felipe@m2mobi.com>
  * @copyright  2012, M2Mobi BV, Amsterdam, The Netherlands
  * @license    http://lunr.nl/LICENSE MIT License
  */
@@ -25,6 +26,7 @@ namespace Lunr\Libraries\DataAccess;
  * @subpackage Libraries
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
  * @author     Olivier Wizen <olivier@m2mobi.com>
+ * @author     Felipe Martinez <felipe@m2mobi.com>
  */
 class MySQLDMLQueryBuilder extends DatabaseDMLQueryBuilder
 {

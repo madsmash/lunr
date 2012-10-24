@@ -10,6 +10,7 @@
  * @subpackage Libraries
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
  * @author     Olivier Wizen <olivier@m2mobi.com>
+ * @author     Felipe Martinez <felipe@m2mobi.com>
  * @copyright  2012, M2Mobi BV, Amsterdam, The Netherlands
  * @license    http://lunr.nl/LICENSE MIT License
  */
@@ -24,6 +25,7 @@ namespace Lunr\Libraries\DataAccess;
  * @subpackage Libraries
  * @author     Heinz Wiesinger <heinz@m2mobi.com>
  * @author     Olivier Wizen <olivier@m2mobi.com>
+ * @author     Felipe Martinez <felipe@m2mobi.com>
  */
 abstract class DatabaseDMLQueryBuilder
 {
@@ -294,7 +296,7 @@ abstract class DatabaseDMLQueryBuilder
     /**
      * Define a DELETE clause.
      *
-     * @param String $delete The tables to delete
+     * @param String $delete The tables to delete from
      *
      * @return void
      */
@@ -563,7 +565,7 @@ abstract class DatabaseDMLQueryBuilder
     /**
      * Define the mode of the DELETE clause.
      *
-     * @param String $mode The select mode you want to use
+     * @param String $mode The delete mode you want to use
      *
      * @return DatabaseDMLQueryBuilder $self Self reference
      */
@@ -572,7 +574,7 @@ abstract class DatabaseDMLQueryBuilder
     /**
      * Define a DELETE clause.
      *
-     * @param String $delete The table references to delete
+     * @param String $delete The table references to delete from
      *
      * @return DatabaseDMLQueryBuilder $self Self reference
      */
