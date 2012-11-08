@@ -289,7 +289,12 @@ abstract class DatabaseDMLQueryBuilder
     public function get_replace_query()
     {
         $components = array();
-        $components[] = 'replace_mode';
+        $valid = array(
+            'LOW_PRIORITY',
+            'DELAYED'
+        );
+        $this->insert_mode = array_intersect($this->insert_mode, $valid);
+        $components[] = 'insert_mode';
         $components[] = 'into';
         if ($this->select_statement != '')
         {
