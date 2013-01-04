@@ -3,7 +3,7 @@
 /**
  * This file contains the SessionClassBaseTest class.
  *
- * PHP Version 5.4
+ * PHP Version 5.3
  *
  * @category   Libraries
  * @package    Core
