@@ -45,6 +45,24 @@ interface DMLQueryBuilderInterface
     public function delete($delete);
 
     /**
+     * Define a UPDATE clause.
+     *
+     * @param String $table The table to update
+     *
+     * @return DMLQueryBuilderInterface $self Self reference
+     */
+    public function update($table);
+
+    /**
+     * Define the mode of the UPDATE clause.
+     *
+     * @param String $mode The update mode you want to use
+     *
+     * @return DMLQueryBuilderInterface $self Self reference
+     */
+    public function update_mode($mode);
+
+    /**
      * Define the mode of the INSERT clause.
      *
      * @param String $mode The insert mode you want to use
